@@ -1,0 +1,45 @@
+name: Build InventoryRollbackPlus
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+          cache: maven
+
+      - name: Install BukkitVersion dependency
+        run: >
+          mvn install:install-file
+          -Dfile=BukkitVersion-0.0.22.jar
+          -DgroupId=com.tcoded.lightlibs
+          -DartifactId=BukkitVersion
+          -Dversion=0.0.22
+          -Dpackaging=jar
+
+      - name: Build plugin
+        run: mvn clean package -DskipTests=true
+
+      - name: Upload plugin JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: InventoryRollbackPlus
+          path: target/InventoryRollbackPlus-*.jar
