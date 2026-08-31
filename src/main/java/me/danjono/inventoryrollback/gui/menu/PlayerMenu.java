@@ -82,7 +82,7 @@ public class PlayerMenu {
             staff.sendMessage(MessageData.getPluginPrefix() + MessageData.getNoBackupError(offlinePlayer.getName()));
         }
         
-        String backupsAvailable = " backup(s) available";
+        String backupsAvailable = " 个可用备份";
 
         List<String> deaths = Arrays.asList(deathBackup.getAmountOfBackups() + backupsAvailable);
         inventory.setItem(2, buttons.createDeathLogButton(LogType.DEATH, deaths));

@@ -348,7 +348,7 @@ public class Buttons {
             meta.setLore(lore);
         }
         
-        meta.setDisplayName(ChatColor.RED + "Deaths");
+        meta.setDisplayName(ChatColor.RED + "死亡记录");
 
         item.setItemMeta(meta);
 
@@ -370,7 +370,7 @@ public class Buttons {
             meta.setLore(lore);
         }
         
-        meta.setDisplayName(ChatColor.GREEN + "Joins");
+        meta.setDisplayName(ChatColor.GREEN + "加入记录");
 
         item.setItemMeta(meta);
 
@@ -392,7 +392,7 @@ public class Buttons {
             meta.setLore(lore);
         }
         
-        meta.setDisplayName(ChatColor.GOLD + "Quits");
+        meta.setDisplayName(ChatColor.GOLD + "退出记录");
 
         item.setItemMeta(meta);
 
@@ -414,7 +414,7 @@ public class Buttons {
             meta.setLore(lore);
         }
         
-        meta.setDisplayName(ChatColor.LIGHT_PURPLE + "World Changes");
+        meta.setDisplayName(ChatColor.LIGHT_PURPLE + "世界变更");
 
         item.setItemMeta(meta);
 
@@ -436,7 +436,7 @@ public class Buttons {
             meta.setLore(lore);
         }
         
-        meta.setDisplayName(ChatColor.AQUA + "Force Saves");
+        meta.setDisplayName(ChatColor.AQUA + "强制保存");
 
         item.setItemMeta(meta);
 
